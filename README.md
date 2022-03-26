@@ -32,7 +32,7 @@ const sub = () => {
 add(counter);
 sub(counter);
 
-It will be more easy to test function this way
+// It will be more easy to test function this way
 
 ```
 
