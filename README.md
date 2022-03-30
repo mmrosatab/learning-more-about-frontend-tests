@@ -28,4 +28,4 @@ counter = add(counter);
 // It will be more easy to test function this way
 ```
 
-- [ ] - How to mock axios and fetch requests?
+- [x] - How to mock axios and fetch requests?
