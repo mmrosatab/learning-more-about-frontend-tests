@@ -1,6 +1,15 @@
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 
+export default function CustomModal(props) {
+  const { open, handleClose, children } = props;
+  return (
+    <Modal data-testid="modal-test-id" open={open} onClose={handleClose}>
+      <Box sx={style}>{children}</Box>
+    </Modal>
+  );
+}
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -12,12 +21,3 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
-
-export default function CustomModal(props) {
-  const { open, handleClose, children, dataTestId } = props;
-  return (
-    <Modal data-testid={dataTestId} open={open} onClose={handleClose}>
-      <Box sx={style}>{children}</Box>
-    </Modal>
-  );
-}

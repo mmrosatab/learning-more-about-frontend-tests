@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-export default function Counter({ value, add, sub }) {
-  const [counter, setCounter] = useState(0);
+export default function Counter({ initialValue }) {
+  const [counter, setCounter] = useState(initialValue);
 
   const handleAdd = () => {
     const value = counter + 1;
@@ -16,10 +16,14 @@ export default function Counter({ value, add, sub }) {
   };
 
   return (
-    <div data-testid="counter-test-id">
-      <h1>{counter}</h1>
-      <button onClick={handleAdd}>+</button>
-      <button onClick={handleSub}>-</button>
+    <div data-testid="counter-testid">
+      <h1 data-testid="counter-h1-testid"> {counter}</h1>
+      <button data-testid="counter-btn-add-testid" onClick={handleAdd}>
+        +
+      </button>
+      <button data-testid="counter-btn-sub-testid" onClick={handleSub}>
+        -
+      </button>
     </div>
   );
 }

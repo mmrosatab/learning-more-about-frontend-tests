@@ -4,14 +4,14 @@ import CustomModal from "../components/CustomModal";
 
 describe("Custom Modal Tests", () => {
   test("verify if modal is visible", () => {
-    render(<CustomModal open={true} dataTestId={"modal-test-id"} />);
+    render(<CustomModal open={true} />);
     const modal = screen.getByTestId("modal-test-id");
     expect(modal).toBeVisible();
   });
 
   test("verify if modal show text correctly", () => {
     render(
-      <CustomModal open={true} dataTestId={"modal-test-id"}>
+      <CustomModal open={true}>
         <h1>Hello</h1>
       </CustomModal>
     );
@@ -20,7 +20,7 @@ describe("Custom Modal Tests", () => {
   });
 
   test("verify if modal is not on DOM", () => {
-    render(<CustomModal open={false} dataTestId={"modal-test-id"} />);
+    render(<CustomModal open={false} />);
     const modal = screen.queryByTestId("modal-test-id");
     expect(modal).toBe(null);
   });

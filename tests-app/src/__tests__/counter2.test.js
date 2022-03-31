@@ -1,16 +1,18 @@
 const add = (num) => num + 1;
 const sub = (num) => num - 1;
 
-test("add function test", () => {
-  let counter = 0;
-  counter = add(counter);
-  expect(counter).toBe(1);
-});
+describe("Counter tests", () => {
+  test("add function test", () => {
+    let counter = 0;
+    counter = add(counter);
+    expect(counter).toBe(1);
+  });
 
-test("sub function test", () => {
-  let counter = 0;
-  counter = sub(counter);
-  expect(counter).toBe(-1);
+  test("sub function test", () => {
+    let counter = 0;
+    counter = sub(counter);
+    expect(counter).toBe(-1);
+  });
 });
 
 // reference material
