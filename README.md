@@ -31,6 +31,6 @@ counter = add(counter);
 - [x] - How to mock axios and fetch requests?
 - [x] - Form test
 - [x] - Modal test
-- [ ] - Counter test
+- [x] - Counter test
 - [ ] - Button test
 - [ ] - Input test

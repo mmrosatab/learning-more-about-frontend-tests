@@ -5,7 +5,7 @@ export default function InputText({ value, handleChange }) {
     <input
       type="text"
       value={value}
-      onChance={(event) => handleChange(event.target.value)}
+      onChange={(event) => handleChange(event.target.value)}
       data-testid="input-text-testid"
     />
   );

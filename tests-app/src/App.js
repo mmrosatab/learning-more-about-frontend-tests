@@ -1,6 +1,8 @@
-import React from "react";
-import List from "./components/List";
+import React, { useState } from "react";
+import InputText from "./components/InputText";
 
 export default function App() {
-  return <List items={[]} />;
+  const [value, setValue] = useState("");
+
+  return <InputText value={value} handleChange={setValue} />;
 }

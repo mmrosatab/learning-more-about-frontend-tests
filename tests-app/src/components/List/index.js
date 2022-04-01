@@ -21,7 +21,7 @@ export default function List({ items }) {
       return (
         <ul data-testid="list-ul-testid">
           {list.map((item, index) => (
-            <li key={index}>
+            <li key={index} data-testid="list-li-testid">
               <div>{item}</div>
               <div>
                 <button type="submit" onClick={() => handleClick(index)}>

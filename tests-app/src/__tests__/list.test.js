@@ -16,10 +16,10 @@ describe("List tests", () => {
     expect(ul).toBe(null);
   });
 
-  test("Check list is visible with initial data", () => {
+  test("Check list is visible with initial data", async () => {
     // render(<List list={["text1", "text2", "text3"]} />);
-    // const ul = screen.getByTestId("list-ul-testid");
-    // console.log(ul);
+    // const lu = await screen.findByTestId("list-ul-testid");
+    // console.log(lu);
     // expect(ul).toHaveTextContent("text1");
   });
 });
