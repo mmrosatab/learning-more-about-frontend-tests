@@ -28,9 +28,9 @@ counter = add(counter);
 // It will be more easy to test function this way
 ```
 
-- [x] - How to mock axios and fetch requests?
+- [x] - Mock request
 - [x] - Form test
 - [x] - Modal test
 - [x] - Counter test
-- [ ] - Button test
-- [ ] - Input test
+- [x] - Input test
+- [x] - List test

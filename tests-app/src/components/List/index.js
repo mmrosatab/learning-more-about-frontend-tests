@@ -23,7 +23,6 @@ export default function List({ items = [] }) {
           {list.map((item, index) => (
             <li key={index} data-testid="list-li-testid">
               <span data-testid="list-item-testid">{item}</span>
-
               <button type="submit" onClick={() => handleClick(index)}>
                 x
               </button>
