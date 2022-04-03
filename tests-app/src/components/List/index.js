@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function List({ items }) {
+export default function List({ items = [] }) {
   const [list, setList] = useState(items);
   const [value, setValue] = useState("");
 
@@ -17,17 +17,16 @@ export default function List({ items }) {
   };
 
   const DisplayData = () => {
-    if (list !== undefined && list !== []) {
+    if (list.length !== 0) {
       return (
         <ul data-testid="list-ul-testid">
           {list.map((item, index) => (
             <li key={index} data-testid="list-li-testid">
-              <div>{item}</div>
-              <div>
-                <button type="submit" onClick={() => handleClick(index)}>
-                  x
-                </button>
-              </div>
+              <span data-testid="list-item-testid">{item}</span>
+
+              <button type="submit" onClick={() => handleClick(index)}>
+                x
+              </button>
             </li>
           ))}
         </ul>
